@@ -1,0 +1,19 @@
+$colors: (
+  'black-color': #000,
+  'white-color': #fff,
+  'dark-color': #1C2023,
+  'darkgrey-color': #30373F,
+  'lightgrey-color': #8C96A0,
+  'grey-color': #A9C7C7,
+  'violet-color': #8856D9,
+  'red-color': #FF4136,
+);
+@function getColors($key) {
+  @return map-get($colors, $key);
+}
+$fonts: (
+  'font-rubik': #{"'Rubik', sans-serif"},
+);
+@function getFonts($key) {
+  @return map-get($fonts, $key);
+}
