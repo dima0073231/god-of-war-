@@ -5,7 +5,8 @@
   "homepage": "https://github.com/dima0073231/god-of-war-",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /god-of-war-/", "deploy": "gh-pages -d dist"
+    "build": "parcel build src/*.html --public-url /god-of-war-/",
+    "deploy": "gh-pages -d list"
   },
   "repository": {
     "type": "git",
