@@ -1,6 +1,6 @@
 .header {
-  background-color: getColors('black-color');
-  padding-top: 50px;
+  background-color: transparent;
+  padding-top: 36px;
   &__pages {
     display: flex;
     align-items: center;
@@ -11,10 +11,17 @@
     justify-content: space-between;
   }
 }
+.is-hidden {
+  opacity: 0;
+}
 .nav-list {
-  display: flex;
-  gap: 31px;
   padding-left: 50px;
+  display: none;
+  @media (min-width: 1200px) {
+    display: flex;
+    gap: 31px;
+    opacity: 1;
+  }
   &__item {
     display: flex;
     align-items: center;
@@ -23,11 +30,9 @@
     margin-left: 9px;
   }
   &__link {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 193%;
-    text-transform: uppercase;
+    @include text(14px, 400, 193%);
     color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
     &:hover {
       color: getColors('violet-color');
     }
@@ -37,20 +42,20 @@
   color: getColors('white-color');
   font-weight: 700;
 }
-.header-btn__icon, .nav-list__icon {
+.header-btn__icon,
+.nav-list__icon {
   fill: getColors('white-color');
 }
-.header-btn, .nav-list__btn{
-    background-color: transparent;
+.header-btn,
+.nav-list__btn {
+  background-color: transparent;
 }
 .header-time {
   display: flex;
   align-items: center;
   gap: 10px;
   &__title {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 100%;
+    @include text(16px, 400, 100%);
     color: getColors('lightgrey-color');
   }
 }
@@ -60,20 +65,14 @@
   padding-left: 19px;
   &__item {
     text-align: center;
-    letter-spacing: 0%;
   }
   &__num {
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 100%;
-    letter-spacing: 0%;
+    @include text(40px, 700, 100%, 0%);
     color: getColors('grey-color');
   }
   &__sym {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 100%;
-    letter-spacing: 0%;
+    @include text(16px, 400, 100%, 0%);
     color: getColors('lightgrey-color');
+    text-align: center;
   }
 }
