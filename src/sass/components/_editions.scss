@@ -1,0 +1,49 @@
+.editions__title {
+  @include text(40px, 600, 47px, 0%, center);
+  color: getColors('white-color');
+  padding: 54px 0 23px;
+}
+.editions-list {
+  @include flex(row, wrap, flex-end, flex-end);
+  gap: 16px;
+}
+.editions-list__item {
+  background: linear-gradient(180deg, rgb(20, 22, 21), rgb(28, 32, 35) 100%);
+  border-radius: 6px;
+  padding: 17px;
+}
+.editions-list__img {
+  width: 316px;
+  height: 172px;
+}
+.editions-list__title {
+  @include text(16px, 700, 19px, 0%, center);
+  color: getColors('white-color');
+  padding: 21px 0 10px;
+}
+.editions-list__text {
+  @include text(16px, 500, 19px, 0%, center);
+  color: getColors('grey-color');
+  padding-bottom: 37px;
+}
+.editions-list__option {
+  @include text(14px, 400, 17px, 0%, left);
+  color: getColors('lightgrey-color');
+}
+.editions-list__option:nth-child(2) {
+  padding: 12px 0;
+}
+.editions-list__cost {
+  @include flex(column, wrap, flex-end, flex-end);
+}
+.editions-list__price {
+  @include text(19px, 700, 23px, 0%, center);
+  color: getColors('white-color');
+  padding: 6px 0 14px;
+}
+.editions-list__btn {
+  @include text(13px, 600, 15px, 0%, center);
+  @include btn(#8856d9, #fff, 6px, 8px 19px);
+  color: getColors('white-color');
+  text-transform: uppercase;
+}
