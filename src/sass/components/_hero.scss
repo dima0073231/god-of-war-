@@ -1,26 +1,27 @@
 .header,
 .hero {
+  position: relative;
   background-image: url('../images/ragnarokheader.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  overflow: hidden;
 }
-.header::after,
-.hero::after {
-  content: '';
+.snowfall {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../images/snowfall.gif');
+  background: url('../images/snowfall.gif');
   background-size: cover;
-  background-repeat: no-repeat;
   pointer-events: none;
   opacity: 0.1;
+  z-index: 1;
 }
 .hero {
   padding: 83px 0 187px;
+  z-index: 2;
   &__title {
     @include text(100px, 600, 100px, 6%, left);
     color: rgb(255, 255, 255);
