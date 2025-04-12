@@ -24,14 +24,14 @@
   z-index: 2;
   &__title {
     @include text(100px, 600, 100px, 6%, left);
-    color: rgb(255, 255, 255);
+    color: getColors('white-color');
     max-width: 538px;
   }
   &__text {
     @include text(18px, 400, 27px, 0%, left);
-    color: rgb(169, 199, 199);
-    max-width: 543px;
+    color: getColors('grey-color');
     padding: 27px 0 50px;
+    max-width: 543px;
   }
   &__btn {
     @include text(16px, 600, 16px, 0%, left);
