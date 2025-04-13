@@ -1,0 +1,2 @@
+var days=20,hours=20,minutes=59;function updateCountdown(){--minutes<0&&(minutes=59,hours--),hours<0&&(hours=23,days--),document.querySelector(".days").textContent=days,document.querySelector(".hours").textContent=hours,document.querySelector(".minutes").textContent=minutes,days<=0&&hours<=0&&minutes<=0&&clearInterval(countdownInterval)}var countdownInterval=setInterval(updateCountdown,6e3);updateCountdown();
+//# sourceMappingURL=god-of-war-.632b7b8f.js.map
