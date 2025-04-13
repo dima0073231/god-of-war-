@@ -1,6 +1,10 @@
 <header class="header">
     <div class="container">
-        <div class="snowfall"></div>
+        <div class="snowfall">
+            <video autoplay muted loop playsinline class="snowfall__video">
+                <source src="./images/videos/snowfall.mp4" type="video/mp4" />
+            </video>
+        </div>
         <div class="header__pages ">
             <button type="button" class="header-btn">
                 <svg class="header-btn__icon" width="25px" height="16px">
@@ -28,12 +32,17 @@
                         <a href="#faq" class="nav-list__link">FAQ</a>
                     </li>
                     <li class="nav-list__item">
-                        <a href="#" class="nav-list__link language">English</a>
-                        <button type="button" class="nav-list__btn">
-                            <svg class="nav-list__icon" width="12px" height="12px">
-                                <use href="./images/symbol-defs.svg#icon-up-arrow"></use>
-                            </svg>
-                        </button>
+                        <details class="language-switcher">
+                            <summary class="nav-list__link language">
+                                English
+                                <svg class="nav-list__icon" width="12px" height="12px">
+                                    <use href="./images/symbol-defs.svg#icon-up-arrow"></use>
+                                </svg>
+                            </summary>
+                            <ul class="language-dropdown">
+                                <li><a href="#" class="nav-list__link language">Ukrainian</a></li>
+                            </ul>
+                        </details>
                     </li>
                 </ul>
             </nav>
