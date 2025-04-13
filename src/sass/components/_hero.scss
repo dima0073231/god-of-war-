@@ -13,12 +13,17 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('../images/snowfall.gif');
-  background-size: cover;
+  overflow: hidden;
   pointer-events: none;
-  opacity: 0.1;
   z-index: 1;
 }
+.snowfall__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.1;
+}
+
 .hero {
   padding: 83px 0 187px;
   z-index: 2;
