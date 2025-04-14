@@ -41,10 +41,20 @@
 .language {
   color: getColors('white-color');
   font-weight: 700;
+  cursor: pointer;
+}
+summary {
+  list-style: none;
 }
 .header-btn__icon,
 .nav-list__icon {
   fill: getColors('white-color');
+}
+.nav-list__icon {
+  transition: transform 0.5s ease;
+}
+.language-switcher[open] .nav-list__icon {
+  transform: rotate(180deg);
 }
 .header-btn,
 .nav-list__btn {
