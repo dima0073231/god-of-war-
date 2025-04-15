@@ -1,0 +1,98 @@
+.dual {
+    background-color: getColors('dark-color');
+    padding: 60px 20px;
+  
+    &__title {
+      @include text(40px, 600, 19px, 0%, center);
+      color: getColors('white-color');
+      padding: 21px 0 40px;
+    }
+  }
+  
+  .dual-list {
+    @include flex(row, nowrap, space-between, stretch);
+  
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 200px;
+      border-radius: 12px;
+      flex-direction: row-reverse;
+      width: 100%;
+     
+    }
+  
+    &__thumb {
+      flex: 0 0 420px;
+      text-align: right;
+    }
+  
+    &__img {
+      width: 100%;
+      height: auto;
+      max-width: 400px;
+      animation: gravitation 1.5s linear infinite alternate;
+  
+      @keyframes gravitation {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-10px);
+        }
+      }
+    }
+   
+  
+    &__options {
+      @include flex(column, nowrap, flex-start, flex-start);
+      gap: 22px;
+      max-width: 420px;
+      flex-grow: 1;
+      
+    }
+  
+    &__option {
+      @include text(18px, 400, 1.5, 0%, left);
+      color: getColors('grey-color');
+  
+      strong,
+      b {
+        color: #9d4bff;
+      }
+  
+      span {
+        color: #f44336;
+        font-weight: bold;
+      }
+    }
+  
+    &__cost {
+      margin-top: 30px;
+      display: flex;
+      text-align: center;
+      align-items: center;
+     
+      gap: 30px;
+    }
+  
+    &__price {
+      font-size: 30px;
+      font-weight: 800;
+      color: getColors('white-color');
+    }
+  
+    &__btn {
+        display: flex;
+      @include text(14px, 700, 1.4, 0%, center);
+      @include btn(#FF4136, #fff, 6px, 14px 19px);
+      text-transform: uppercase;
+      color: getColors('white-color');
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: darken(#FF4136, 10%);
+      }
+    }
+  }
+  
