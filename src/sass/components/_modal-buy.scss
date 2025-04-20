@@ -1,0 +1,150 @@
+.backdrop-buy {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  @include flex(row, wrap, center, center);
+  z-index: 2;
+}
+.is-hidden {
+  display: none;
+}
+.buy-modal {
+  position: relative;
+  background-image: url('../images/ragnarokmodal.png'),
+    linear-gradient(180deg, rgba(79, 96, 152, 0) 63.61%, #30373f 100%);
+  background-size: 90%, cover;
+  background-position: 30px 85px, center center;
+  background-repeat: no-repeat;
+  background-color: getColors('dark-color');
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  padding: 32px;
+  width: 470px;
+  height: 545px;
+  border-radius: 12px;
+  z-index: 3;
+  &__close-btn {
+    position: absolute;
+    top: 6px;
+    right: 12px;
+    color: getColors('white-color');
+    background-color: transparent;
+    border: none;
+    width: 9px;
+    height: 19px;
+    font-size: 20px;
+  }
+  &__headline {
+    text-align: center;
+  }
+  &__title {
+    color: getColors('violet-color');
+    @include text(18px, 700, 1, 0%, center);
+  }
+  &__pretitle {
+    color: getColors('white-color');
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.25;
+    padding-top: 14px;
+  }
+  &__submit-btn {
+    width: 100%;
+    padding: 11px 0;
+    border: none;
+    border-radius: 6px;
+    background-color: getColors('violet-color');
+    color: getColors('white-color');
+    @include text(15px, 500, 1.18, 0%, center);
+    text-transform: uppercase;
+  }
+  &__checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: getColors('white-color');
+    @include text(12px, 400, 1.12, 0%, left);
+    text-transform: uppercase;
+    padding: 17px 0 7px;
+  }
+  &__checkbox {
+    display: none;
+  }
+  &__checkbox:checked + .custom-checkbox::after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 9px;
+    width: 6px;
+    height: 12px;
+    border: 1px solid getColors('white-color');
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+  &__info {
+    color: rgb(217, 217, 217);
+    @include text(10px, 400, 1.2, 0%, left);
+  }
+}
+.buy-modal-list {
+  @include text(12px, 400, 1.12, 0%, left);
+  &__input {
+    width: 406px;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: getColors('darkgrey-color');
+    color: rgb(217, 217, 217);
+    @include text(12px, 400, 1.12, 0%, left);
+    text-transform: uppercase;
+  }
+  &__input--small {
+    width: 190px;
+  }
+  &__label {
+    color: getColors('white-color');
+    @include text(10px, 400, 1.12, 0%, left);
+    text-transform: uppercase;
+    display: block;
+    padding: 17px 0 7px;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  &__half {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+}
+.custom-checkbox {
+  background-color: getColors('darkgrey-color');
+  width: 25px;
+  height: 25px;
+  border-radius: 6px;
+  position: relative;
+  &__link {
+    @include text(12px, 600, 1.4, 0%, center);
+    cursor: pointer;
+    color: getColors('red-color');
+    text-decoration: underline;
+    text-decoration-color: getColors('red-color');
+  }
+}
+.buy-modal-box {
+  display: flex;
+  justify-content: space-between;
+  color: getColors('white-color');
+  padding: 12px 0 19px;
+  &__text {
+    @include text(14px, 500, 1.17, 0%, left);
+    text-transform: uppercase;
+  }
+  &__sum {
+    @include text(20px, 500, 1.24, 0%, left);
+  }
+}
