@@ -1,0 +1,2 @@
+var openBtn=document.querySelector("[data-open-buy]"),closeBtn=document.querySelector("[data-close-buy]"),backdrop=document.querySelector(".backdrop-buy");openBtn.addEventListener("click",function(){backdrop.classList.remove("is-hidden"),document.body.style.overflow="hidden"}),closeBtn.addEventListener("click",function(){backdrop.classList.add("is-hidden"),document.body.style.overflow="visible"});
+//# sourceMappingURL=god-of-war-.dd5dbc65.js.map
