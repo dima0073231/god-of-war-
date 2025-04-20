@@ -2,8 +2,8 @@
 .hero {
   position: relative;
   background-image: url('../images/ragnarokheader.jpg');
-  background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+  background-position: top right;
   background-attachment: fixed;
   overflow: hidden;
 }
