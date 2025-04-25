@@ -12,6 +12,23 @@
   display: none;
 }
 .buy-modal {
+  animation: drop 0.5s ease-out;
+}
+@keyframes drop {
+  0% {
+    transform: translateY(-100%);
+  }
+  60% {
+    transform: translateY(30px) ;
+  }
+  80% {
+    transform: translateY(-15px) ;
+  }
+  100% {
+    transform: translateY(0) ;
+  }
+}
+.buy-modal {
   position: relative;
   background-image: url('../images/ragnarokmodal.png'),
     linear-gradient(180deg, rgba(79, 96, 152, 0) 63.61%, #30373f 100%);
