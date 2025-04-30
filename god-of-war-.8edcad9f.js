@@ -1,0 +1,2 @@
+var burgerButton=document.querySelector(".header-btn"),navList=document.querySelector(".nav-list"),closeButton=document.querySelector(".nav-list__close");burgerButton.addEventListener("click",function(){window.innerWidth<1200?navList.classList.toggle("is-open"):navList.classList.toggle("is-hidden")}),closeButton.addEventListener("click",function(){window.innerWidth<1200?navList.classList.remove("is-open"):navList.classList.add("is-hidden")});
+//# sourceMappingURL=god-of-war-.8edcad9f.js.map
