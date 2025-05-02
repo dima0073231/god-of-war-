@@ -111,12 +111,18 @@ summary {
     text-align: center;
   }
   &__num {
-    @include text(40px, 700, 100%, 0%);
+    @include text(30px, 700, 100%, 0%);
     color: getColors('grey-color');
+    @media (min-width: 768px) {
+      font-size: 40px;
+    }
   }
   &__sym {
-    @include text(16px, 400, 100%, 0%);
+    @include text(12px, 400, 100%, 0%);
     color: getColors('lightgrey-color');
     text-align: center;
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
   }
 }

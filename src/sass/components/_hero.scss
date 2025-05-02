@@ -1,11 +1,14 @@
 .header,
 .hero {
   position: relative;
-  background-image: url('../images/ragnarokheader.jpg');
   background-repeat: no-repeat;
   background-position: top right;
   background-attachment: fixed;
   overflow: hidden;
+  @media (min-width: 768px) {
+    background-image: url('../images/ragnarokheader.jpg');
+    width: 100%;
+  }
 }
 .snowfall {
   position: absolute;
@@ -27,15 +30,36 @@
   padding: 83px 0 187px;
   z-index: 2;
   &__title {
-    @include text(100px, 600, 100px, 6%, left);
+    @include text(50px, 600, 60px, 6%, left);
     color: getColors('white-color');
-    max-width: 538px;
+    max-width: 338px;
+    @media (min-width: 768px) {
+      max-width: 438px;
+      font-size: 80px;
+      line-height: 80px;
+    }
+    @media (min-width: 1200px) {
+      max-width: 538px;
+      font-size: 100px;
+      line-height: 100px;
+    }
   }
   &__text {
-    @include text(18px, 400, 27px, 0%, left);
+    @include text(14px, 400, 19px, 0%, left);
     color: getColors('grey-color');
-    padding: 27px 0 50px;
-    max-width: 543px;
+    padding: 20px 0 35px;
+    max-width: 343px;
+    @media (min-width: 768px) {
+      max-width: 443px;
+      font-size: 16px;
+      line-height: 23px;
+      padding: 27px 0 50px;
+    }
+    @media (min-width: 1200px) {
+      max-width: 543px;
+      font-size: 18px;
+      line-height: 27px;
+    }
   }
   &__btn {
     @include text(16px, 600, 16px, 0%, left);
