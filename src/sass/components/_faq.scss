@@ -1,0 +1,43 @@
+.faq{
+    position: relative;
+}
+.faq__title{
+        @include text(40px, 600, $text-align: center);
+        color: getColors('white-color');
+        margin-bottom: 32px;
+}
+.faq-list__title{
+    @include text(17px, 600);
+    color: getColors('white-color');
+    margin-top: 32px;
+    padding-bottom: 13px;
+    border-bottom: 2px solid getColors('violet-color');
+    position: relative;
+}
+.faq-list__overlay{
+    display: block;
+}
+.faq-list__overlay--text{
+    @include text();
+    color: getColors('white-color');
+    margin: 13px;
+    // display: none;
+}
+.faq-items__span{
+    color: getColors('red-color');
+}
+.faq-list__btn{
+    width: 30px;
+    height: 30px;
+    background: getColors('lightgrey-color'), rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    transform: translateY(50%);
+}
+.faq-list__svg{
+    fill: getColors('white-color');
+    height: 24px;
+    width: 13px;
+}
