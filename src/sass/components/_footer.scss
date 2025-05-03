@@ -1,4 +1,5 @@
 .footer {
+    position: relative;
     padding-top: 157px;
 }
 // .footer .container{
@@ -58,12 +59,11 @@
     }
 }
 .footer-bg {
-    width: 786px;
-height: 439px;
-position: absolute;
-z-index: -1;
-top: 5000;
-left: 410px;
+    position: absolute;
+    z-index: -1;    width: 786px;
+    height: 439px;
+    top: 0;
+    left: 410px;
 }
 .footer-info__ps{
     width: 46;
