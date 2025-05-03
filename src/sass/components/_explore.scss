@@ -104,7 +104,7 @@
 
 
 .explore-text__title {
-    @include text(40px, 600, 19px, 0%, center);
+    @include text(30px, 600, 19px, 0%, center);
     color: getColors('white-color');
     padding: 21px 0 40px;
   
@@ -131,6 +131,17 @@
     .explore__title {
         font-size: 2rem;
     }
+    .explore__system-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    
+    .explore__system-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
 
     .explore-list__text {
         font-size: 0.9rem;
