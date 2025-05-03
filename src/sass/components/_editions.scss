@@ -6,44 +6,48 @@
 .editions-list {
   @include flex(row, wrap, flex-end, center);
   gap: 16px;
-&__item {
-  background: linear-gradient(180deg, rgb(20, 22, 21), rgb(28, 32, 35) 100%);
-  border-radius: 6px;
-  padding: 17px;
-}
-&__img {
-  width: 316px;
-  height: 172px;
-}
-&__title {
-  @include text(16px, 700, 19px, 0%, center);
-  color: getColors('white-color');
-  padding: 21px 0 10px;
-}
-&__text {
-  @include text(16px, 500, 19px, 0%, center);
-  color: getColors('grey-color');
-  padding-bottom: 37px;
-}
-&__option {
-  @include text(14px, 400, 17px, 0%, left);
-  color: getColors('lightgrey-color');
-}
-&__option:nth-child(2) {
-  padding: 12px 0;
-}
-&__cost {
-  @include flex(column, wrap, flex-end, flex-end);
-}
-&__price {
-  @include text(19px, 700, 23px, 0%, center);
-  color: getColors('white-color');
-  padding: 6px 0 14px;
-}
-&__btn {
-  @include text(13px, 600, 15px, 0%, center);
-  @include btn(#8856d9, #fff, 6px, 8px 19px);
-  color: getColors('white-color');
-  text-transform: uppercase;
-}
+  &__item {
+    background: linear-gradient(180deg, rgb(20, 22, 21), rgb(28, 32, 35) 100%);
+    border-radius: 6px;
+    padding: 17px;
+  }
+  &__img {
+    width: 286px;
+    height: 172px;
+    @media (min-width: 768px) {
+      width: 316px;
+      height: 172px;
+    }
+  }
+  &__title {
+    @include text(16px, 700, 19px, 0%, center);
+    color: getColors('white-color');
+    padding: 21px 0 10px;
+  }
+  &__text {
+    @include text(16px, 500, 19px, 0%, center);
+    color: getColors('grey-color');
+    padding-bottom: 37px;
+  }
+  &__option {
+    @include text(14px, 400, 17px, 0%, left);
+    color: getColors('lightgrey-color');
+  }
+  &__option:nth-child(2) {
+    padding: 12px 0;
+  }
+  &__cost {
+    @include flex(column, wrap, flex-end, flex-end);
+  }
+  &__price {
+    @include text(19px, 700, 23px, 0%, center);
+    color: getColors('white-color');
+    padding: 6px 0 14px;
+  }
+  &__btn {
+    @include text(13px, 600, 15px, 0%, center);
+    @include btn(#8856d9, #fff, 6px, 8px 19px);
+    color: getColors('white-color');
+    text-transform: uppercase;
+  }
 }
