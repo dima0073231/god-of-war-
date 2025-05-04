@@ -1,43 +1,81 @@
-.faq{
-    position: relative;
-}
 .faq__title{
         @include text(40px, 600, $text-align: center);
         color: getColors('white-color');
-        margin-bottom: 32px;
+        margin: 107px 0 32px 0;
 }
+.faq-list__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid getColors('violet-color');
+    padding-bottom: 13px;
+    margin-top: 32px;
+    position: relative;
+  }
+  
+
 .faq-list__title{
     @include text(17px, 600);
     color: getColors('white-color');
     margin-top: 32px;
     padding-bottom: 13px;
-    border-bottom: 2px solid getColors('violet-color');
-    position: relative;
 }
-.faq-list__overlay{
-    display: block;
-}
+
+    // .faq-list__overlay {
+    //     transform: translateY(-100%);
+    //     opacity: 0;
+    //     transition: opacity 500ms ease-in-out, transform 600ms ease-in-out;
+    //   }
+    //   .faq-list__svg--close {
+    //     display: none;
+    //   }
+      
+    //   .faq-list__item.open .faq-list__svg--open {
+    //     display: none;
+    //   }
+      
+    //   .faq-list__item.open .faq-list__svg--close {
+    //     display: inline;
+    //   }
+    //   .faq-list__item.open .faq-list__overlay {
+    //     opacity: 1;
+    //     transform: translateY(0);
+    // }
 .faq-list__overlay--text{
     @include text();
     color: getColors('white-color');
     margin: 13px;
-    // display: none;
 }
 .faq-items__span{
     color: getColors('red-color');
 }
 .faq-list__btn{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 30px;
     height: 30px;
-    background: getColors('lightgrey-color'), rgba(0, 0, 0, 0.2);
     border-radius: 6px;
-    position: absolute;
-    z-index: 1;
-    right: 0;
-    transform: translateY(50%);
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.2) 100%
+      ),
+      #8c96a0;
 }
 .faq-list__svg{
     fill: getColors('white-color');
     height: 24px;
     width: 13px;
-}
+    &--open {
+        display: block;
+      }
+  
+      &--close {
+        display: none;
+        width: 16px;
+        height: 16px;
+      }
+    }
